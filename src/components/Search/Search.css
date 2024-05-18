@@ -1,0 +1,47 @@
+/* Container styles */
+.react-select-async-paginate {
+  position: relative;
+}
+
+/* Input styles */
+.react-select-async-paginate__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Dropdown menu styles */
+.react-select-async-paginate__menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 200px; /* Adjust according to your preference */
+}
+
+/* Option styles */
+.react-select-async-paginate__option {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Selected option styles */
+.react-select-async-paginate__option--is-selected {
+  background-color: #f0f0f0;
+}
+
+/* Loading indicator styles */
+.react-select-async-paginate__loading-indicator {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
