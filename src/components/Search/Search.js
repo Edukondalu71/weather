@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
 import { fetchCities } from '../../api/OpenWeatherService';
-import './Search.css'
 
 const Search = ({ onSearchChange }) => {
   const [searchValue, setSearchValue] = useState(null);
