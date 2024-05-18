@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Container, Grid, Link, SvgIcon, Typography } from '@mui/material';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import Search from './components/Search/Search';
 import WeeklyForecast from './components/WeeklyForecast/WeeklyForecast';
 import TodayWeather from './components/TodayWeather/TodayWeather';
@@ -7,7 +7,6 @@ import { fetchWeatherData } from './api/OpenWeatherService';
 import { transformDateFormat } from './utilities/DatetimeUtils';
 import UTCDatetime from './components/Reusable/UTCDatetime';
 import LoadingBox from './components/Reusable/LoadingBox';
-import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/icon.png';
 import ErrorBox from './components/Reusable/ErrorBox';
 import { ALL_DESCRIPTIONS } from './utilities/DateConstants';
@@ -64,19 +63,17 @@ function App() {
   };
 
   useEffect(() => {
-  if (navigator.geolocation)  {
-    getFindLocation()
-    .then(locationObj => {
-        console.log('Location:', locationObj);
-        searchChangeHandler(locationObj);
-    })
-    .catch(error => {
-        //alert('error')
-    });
-    
-  }else {
-    console.log('Elseeeeee getting location:', error);
-  }
+    if (navigator.geolocation) {
+      getFindLocation()
+        .then(locationObj => {
+          console.log('Location:', locationObj);
+          searchChangeHandler(locationObj);
+        })
+        .catch(error => {
+          //alert('error')
+        });
+
+    }
   }, [])
 
   let appContent = (
@@ -92,14 +89,14 @@ function App() {
       }}
     >
       <Box
-              component="img"
-              sx={{
-                height: { xs: '25vh', sm: '28vh', md: '35vh' },
-                width: 'auto',
-              }}
-              alt="logo"
-              src={Logo}
-            />
+        component="img"
+        sx={{
+          height: { xs: '25vh', sm: '28vh', md: '35vh' },
+          width: 'auto',
+        }}
+        alt="logo"
+        src={Logo}
+      />
       {/* <SvgIcon
         component={SplashIcon}
         inheritViewBox
@@ -217,7 +214,7 @@ function App() {
               alt="logo"
               src={Logo}
             /> */}
-            
+
             <UTCDatetime />
             <Link
               href="https://github.com/Edukondalu71"
