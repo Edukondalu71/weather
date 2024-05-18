@@ -115,8 +115,7 @@ function App() {
           lineHeight: '22px',
         }}
       >
-        Explore current weather data and 6-day forecast of more than 200,000
-        cities!
+       Discover the present weather conditions and a six-day forecast
       </Typography>
     </Box>
   );
@@ -182,7 +181,7 @@ function App() {
         width: '100%',
         height: '100%',
         margin: '0 auto',
-        padding: '1rem 0 3rem',
+        padding: '1rem 0 1rem',
         marginBottom: '1rem',
         borderRadius: {
           xs: 'none',
